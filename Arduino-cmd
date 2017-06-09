@@ -2,8 +2,15 @@
         -Testing
         -Setting
         -Command
+Protocol: 
+    TCP raw socket or UDP  (Still in process review and Not confirmed!)
+
+Application data:
+    {StartByte , ...cmd .... ,  EndByte}
 
 
+-------------CMD-------------------
+-------------CMD-------------------
 Testing: 
     run sequence:   {60, head_number} 
     frame_up :      {61, head_number}
@@ -16,15 +23,14 @@ Testing:
     heat:           {68, head_number}
 
 -Setting:
-
     input: {70, round}
     configuration: {71, head_number, active, type, speed_motor}
     set default: {72, head_number}
-
 
 -CMD:
     start: {80}
     stop: {81}
     skip: {82, head_number}
-
+-------------CMD-------------------
+-------------CMD-------------------
 
