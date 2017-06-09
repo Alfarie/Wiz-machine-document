@@ -1,0 +1,30 @@
+ CMD type:
+        -Testing
+        -Setting
+        -Command
+
+
+Testing: 
+    run sequence:   {60, head_number} 
+    frame_up :      {61, head_number}
+    frame_down:     {62, head_number}
+    sweep_fw:       {63, head_number}
+    sweep_bw:       {64, head_number}
+    squeeze:        {65,head_number}
+    rotate_fw:      {66, head_number}
+    rotate_bw:      {67, head_number}
+    heat:           {68, head_number}
+
+-Setting:
+
+    input: {70, round}
+    configuration: {71, head_number, active, type, speed_motor}
+    set default: {72, head_number}
+
+
+-CMD:
+    start: {80}
+    stop: {81}
+    skip: {82, head_number}
+
+
